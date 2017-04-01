@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -eu
+
+if [[ "${instance_group:-}" != "" ]]; then
+  arg="${instance_group}"
+
+  if [[ "${instance_id:-}" != "" ]]; then
+    arg="${arg}/${instance_id}"
+  fi
+fi
+
+exec bosh-deployment "$@" "${arg:-}"

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -eu
+
+export BOSH_CA_CERT="${ca_cert}"
+export BOSH_CLIENT="${client}"
+export BOSH_CLIENT_SECRET="${client_secret}"
+export BOSH_ENVIRONMENT="${environment}"
+
+exec bosh "$@"

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -eu -o pipefail
+
+if [[ "${_test_bosh_exit:-}" != "" ]]; then
+  echo "arg: $1"
+  exit "${_test_bosh_exit}"
+fi
+
+env | grep ^BOSH_ | sort | sed 's/^/env: /'
+
+for arg in "$@"; do echo "arg: $arg"; done

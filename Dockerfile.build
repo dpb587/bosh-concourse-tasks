@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -eu
+
+exec docker build -t dpb587/bosh-task:master "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"

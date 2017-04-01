@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -eu
+
+export BOSH_DEPLOYMENT="${deployment}"
+
+exec bosh-environment "$@"
