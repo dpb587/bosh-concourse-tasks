@@ -1,0 +1,19 @@
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: dpb587/bosh-concourse-tasks
+    tag: master
+run:
+  path: /usr/local/bin/bosh-deployment-instance-slug
+  args:
+  - stop
+  - --hard
+params:
+  ca_cert: ~
+  client: ~
+  client_secret: ~
+  environment: ~
+  deployment: ~
+  instance_group: ~
+  instance_id: ~

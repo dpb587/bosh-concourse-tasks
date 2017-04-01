@@ -401,6 +401,74 @@ var _ = Describe("test", func() {
 		})
 	})
 
+	Describe("stop-hard.yml", func() {
+		It("propagates errors", func() {
+			params := defaultDeploymentParams()
+			params["_test_bosh_exit"] = "2"
+
+			result := executeConfig("stop-hard.yml", params)
+
+			Expect(result).To(Equal(executeResult{
+				Exit: 2,
+				Env:  map[string]string{},
+				Arg: []string{
+					"stop",
+				},
+			}))
+		})
+
+		It("executes for deployment", func() {
+			result := executeConfig("stop-hard.yml", defaultDeploymentParams())
+
+			Expect(result).To(Equal(executeResult{
+				Exit: 0,
+				Env:  defaultEnvironmentEnv,
+				Arg: []string{
+					"-n",
+					"stop",
+					"--hard",
+				},
+			}))
+		})
+
+		It("executes for instance group", func() {
+			params := defaultDeploymentParams()
+			params["instance_group"] = "fake-instance_group"
+
+			result := executeConfig("stop-hard.yml", params)
+
+			Expect(result).To(Equal(executeResult{
+				Exit: 0,
+				Env:  defaultEnvironmentEnv,
+				Arg: []string{
+					"-n",
+					"stop",
+					"--hard",
+					"fake-instance_group",
+				},
+			}))
+		})
+
+		It("executes for instance", func() {
+			params := defaultDeploymentParams()
+			params["instance_group"] = "fake-instance_group"
+			params["instance_id"] = "fake-instance_id"
+
+			result := executeConfig("stop-hard.yml", params)
+
+			Expect(result).To(Equal(executeResult{
+				Exit: 0,
+				Env:  defaultEnvironmentEnv,
+				Arg: []string{
+					"-n",
+					"stop",
+					"--hard",
+					"fake-instance_group/fake-instance_id",
+				},
+			}))
+		})
+	})
+
 	Describe("take-snapshot.yml", func() {
 		It("propagates errors", func() {
 			params := defaultDeploymentParams()
