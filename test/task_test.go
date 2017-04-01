@@ -36,6 +36,7 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
+					"-n",
 					"clean-up",
 				},
 			}))
@@ -53,6 +54,7 @@ var _ = Describe("test", func() {
 					"BOSH_ENVIRONMENT":   "fake-environment",
 				},
 				Arg: []string{
+					"-n",
 					"clean-up",
 					"--all",
 				},
@@ -71,6 +73,7 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
+					"-n",
 					"clean-up",
 				},
 			}))
@@ -88,6 +91,7 @@ var _ = Describe("test", func() {
 					"BOSH_ENVIRONMENT":   "fake-environment",
 				},
 				Arg: []string{
+					"-n",
 					"clean-up",
 				},
 			}))
@@ -105,6 +109,7 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
+					"-n",
 					"recreate",
 				},
 			}))
@@ -117,6 +122,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"recreate",
 				},
 			}))
@@ -132,6 +138,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"recreate",
 					"fake-instance_group",
 				},
@@ -149,6 +156,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"recreate",
 					"fake-instance_group/fake-instance_id",
 				},
@@ -167,6 +175,7 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
+					"-n",
 					"run-errand",
 				},
 			}))
@@ -182,6 +191,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"run-errand",
 					"fake-errand",
 				},
@@ -200,6 +210,7 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
+					"-n",
 					"ssh",
 				},
 			}))
@@ -215,6 +226,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"ssh",
 					"-c",
 					`echo "uptime's "; uptime`,
@@ -233,6 +245,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"ssh",
 					"-c",
 					`echo "uptime's "; uptime`,
@@ -253,6 +266,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"ssh",
 					"-c",
 					`echo "uptime's "; uptime`,
@@ -273,6 +287,7 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
+					"-n",
 					"start",
 				},
 			}))
@@ -285,6 +300,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"start",
 				},
 			}))
@@ -300,6 +316,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"start",
 					"fake-instance_group",
 				},
@@ -317,6 +334,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"start",
 					"fake-instance_group/fake-instance_id",
 				},
@@ -335,6 +353,7 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
+					"-n",
 					"stop",
 				},
 			}))
@@ -347,6 +366,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"stop",
 				},
 			}))
@@ -362,6 +382,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"stop",
 					"fake-instance_group",
 				},
@@ -379,6 +400,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"stop",
 					"fake-instance_group/fake-instance_id",
 				},
@@ -397,6 +419,7 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
+					"-n",
 					"take-snapshot",
 				},
 			}))
@@ -409,6 +432,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"take-snapshot",
 				},
 			}))
@@ -424,6 +448,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"take-snapshot",
 					"fake-instance_group",
 				},
@@ -441,6 +466,7 @@ var _ = Describe("test", func() {
 				Exit: 0,
 				Env:  defaultEnvironmentEnv,
 				Arg: []string{
+					"-n",
 					"take-snapshot",
 					"fake-instance_group/fake-instance_id",
 				},

@@ -7,4 +7,4 @@ export BOSH_CLIENT="${client}"
 export BOSH_CLIENT_SECRET="${client_secret}"
 export BOSH_ENVIRONMENT="${environment}"
 
-exec bosh "$@"
+exec bosh -n "$@"
