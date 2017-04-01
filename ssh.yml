@@ -2,7 +2,7 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: dpb587/bosh-task
+    repository: dpb587/bosh-concourse-tasks
     tag: master
 run:
   path: /usr/local/bin/bosh-deployment-ssh

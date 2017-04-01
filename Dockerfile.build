@@ -2,4 +2,4 @@
 
 set -eu
 
-exec docker build -t dpb587/bosh-task:master "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+exec docker build -t dpb587/bosh-concourse-tasks:master "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"

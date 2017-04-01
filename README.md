@@ -37,7 +37,7 @@ meta:
     ca_cert: ((bosh_ca_cert))
     client: ((bosh_client))
     client_secret: ((bosh_client_secret))
-    environment: ((bosh_deployment))
+    environment: ((bosh_environment))
   bosh_deployment: &bosh_deployment
     <<: *bosh_environment
     deployment: legacy

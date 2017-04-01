@@ -488,7 +488,7 @@ func executeConfig(file string, params map[string]string) executeResult {
 		args = append(args, "-e", fmt.Sprintf("%s=%s", key, val))
 	}
 
-	args = append(args, "dpb587/bosh-task:master-spec", configStruct.Run.Path)
+	args = append(args, "dpb587/bosh-concourse-tasks:master-spec", configStruct.Run.Path)
 
 	for _, arg := range configStruct.Run.Args {
 		args = append(args, arg)
