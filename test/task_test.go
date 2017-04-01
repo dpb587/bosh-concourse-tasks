@@ -36,7 +36,6 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
-					"-n",
 					"clean-up",
 				},
 			}))
@@ -73,7 +72,6 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
-					"-n",
 					"clean-up",
 				},
 			}))
@@ -109,7 +107,6 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
-					"-n",
 					"recreate",
 				},
 			}))
@@ -175,7 +172,6 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
-					"-n",
 					"run-errand",
 				},
 			}))
@@ -210,7 +206,6 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
-					"-n",
 					"ssh",
 				},
 			}))
@@ -287,7 +282,6 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
-					"-n",
 					"start",
 				},
 			}))
@@ -353,7 +347,6 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
-					"-n",
 					"stop",
 				},
 			}))
@@ -419,7 +412,6 @@ var _ = Describe("test", func() {
 				Exit: 2,
 				Env:  map[string]string{},
 				Arg: []string{
-					"-n",
 					"take-snapshot",
 				},
 			}))

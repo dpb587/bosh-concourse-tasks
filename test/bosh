@@ -3,7 +3,7 @@
 set -eu -o pipefail
 
 if [[ "${_test_bosh_exit:-}" != "" ]]; then
-  echo "arg: $1"
+  echo "arg: $2"
   exit "${_test_bosh_exit}"
 fi
 
