@@ -5,7 +5,7 @@ Execute [BOSH](https://bosh.io/) tasks via [Concourse](https://concourse.ci/) ta
 
 ## Director Tasks
 
-Requires `client`, `client_secret`, `director`, and accepts `ca_cert` parameters.
+Requires `client`, `client_secret`, and `environment`; and accepts `ca_cert` parameters.
 
  * `clean-up.yml`
  * `clean-up-all.yml`
@@ -13,19 +13,20 @@ Requires `client`, `client_secret`, `director`, and accepts `ca_cert` parameters
 
 ### Deployment Tasks
 
-Requires `deployment` parameter.
+Also requires `deployment` parameter.
 
  * `run-errand.yml` (requires `errand` parameter)
 
 
 #### Instance Group / ID Tasks
 
-Accepts `instance_group` and `id` parameters.
+Also accepts `instance_group` and `id` parameters.
 
  * `recreate.yml`
  * `ssh.yml` (requires `command` parameter)
  * `start.yml`
  * `stop.yml`
+ * `stop-hard.yml`
  * `take-snapshot.yml`
 
 
